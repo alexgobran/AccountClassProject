@@ -3,18 +3,25 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace AccountClassProject {
-    class Account {
+    public class Account {
 
+        //Properties
         private static int nextAccountNmbr = 0;
         public int AccountNumber { get; private set; }
         private decimal Balance { get; set; } = 0.0m;
         public string Description { get; set; }
         public Customer CustomerInstance { get; set; } = null;
 
+
+
+        public string Print() {
+            return $"{this.GetType().Name} Nbr:{AccountNumber}, Desc:{Description}, Bal:{GetBalance().ToString("C")}";
+
+        }
         //Constructor 
         //always public, do not return values. ( can eliminate return type) has to be named same as the Class name (Account)
 
-        public Account(Customer customer): this() {
+            public Account(Customer customer): this() {
             this.CustomerInstance = customer;
 
         }

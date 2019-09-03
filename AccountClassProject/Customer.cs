@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 //Always starting with properties (the data) before doing methods
 namespace AccountClassProject {
-    class Customer {
+     public class Customer {
         //properties
            private static int nextIdNbr = 0;
         public int Id { get; private set; }
