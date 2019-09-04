@@ -7,7 +7,7 @@ namespace AccountClassProject {
             var cust1 = new Customer();
             cust1.Name = "New Customer";
 
-            var sav1 = new Savings(0.02m, "My Primary Saving", cust1);
+            var sav1 = new Savings(0.01m, "My Primary Saving", cust1);
             sav1.Deposit(120);
             sav1.Withdraw(20);
             Console.WriteLine($"Sav1 balance is {sav1.GetBalance()}");
